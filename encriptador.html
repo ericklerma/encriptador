@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <title>Encriptador</title>
+</head>
+<body>
+
+  <textarea id="inputText" style="width: 500px; height: 150px;"></textarea>
+
+  <button onclick="encrypt()">Encriptar</button>
+  <button onclick="decrypt()">Desencriptar</button>  
+
+  <div id="output"></div>
+
+  <script>
+    function encrypt() {
+      var input = document.getElementById("inputText").value; 
+      var output = input.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+
+      document.getElementById("output").innerHTML = output;
+    }
+
+    function decrypt() {
+      var input = document.getElementById("output").innerHTML;
+      var output = input.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+
+      document.getElementById("inputText").value = output;
+    } 
+  </script>
+  
+</body>
+</html>
